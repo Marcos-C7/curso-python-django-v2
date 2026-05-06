@@ -1,0 +1,28 @@
+body {
+    margin: 0px;
+}
+
+.fondo-gris {
+    background-color: hsl(184, 10%, 73%);
+}
+
+.titulo {
+    color: hsl(75, 83%, 84%);
+    background-color: hsl(131, 13%, 15%);
+    margin: 0px;
+    padding: 20px
+}
+
+.formulario {
+    margin: 10px;
+    padding: 20px;
+}
+
+.campo-form {
+    margin-bottom: 15px;
+}
+
+.mensaje-error {
+    margin: 0px;
+    color: rgb(176, 3, 3);
+}

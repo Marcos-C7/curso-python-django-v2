@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de descendientes - CSS</title>
+    <style>
+        .catalogo .card {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 150px;
+        }
+        /* Vemos que podemos usar varios niveles en el selector */
+        .catalogo .card div {
+            font-weight: bold;
+            color: hsl(182, 100%, 34%);
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selector de descendientes</h1>
+
+    <div class="catalogo">
+        <div class="card">
+            <div>Título</div>
+            <img src="img/img-02-512x512.png" width="150">
+        </div>
+    </div>
+
+    <!-- El siguiente elemento no recibe los estilos porque no es descendiente 
+        de .catalogo -->
+    <div class="card">
+        <div>Título</div>
+        <img src="img/img-02-512x512.png" width="150">
+    </div>
+</body>
+</html>

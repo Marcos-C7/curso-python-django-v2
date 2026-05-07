@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de hijo directo - CSS</title>
+    <style>
+        .contenedor {
+            width: 50%;
+            border: 1px solid black;
+            padding: 5px;
+            margin: 5px;
+        }
+        
+        .cuadro {
+            border: 1px solid black;
+            width: 30px;
+            height: 30px;
+        }
+
+        .principal > .cuadro {
+            background-color: hsl(81, 60%, 35%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Selector de hijo directo</h1>
+
+    <div class="contenedor principal">
+        <div class="cuadro"></div>
+        <div class="contenedor">
+            <div class="cuadro"></div>
+            <div class="cuadro"></div>
+        </div>
+        <div class="cuadro"></div>
+    </div>
+</body>
+</html>

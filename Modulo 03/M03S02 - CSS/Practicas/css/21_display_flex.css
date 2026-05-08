@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    width: 200px;
+    background: white;
+    border-radius: 12px;
+    /* Para que no desborde el banner (color sólido) */
+    overflow: hidden; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card-banner {
+    height: 140px;
+    background: #4a90e2;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card-title {
+    margin: 0px 0px 10px 0px;
+    font-size: 18px;
+}
+
+.card-text {
+    margin: 0;
+    color: #555;
+    line-height: 1.2;
+}
+
+.card-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 16px;
+    background: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.card-button:hover {
+    background: #357abd;
+}

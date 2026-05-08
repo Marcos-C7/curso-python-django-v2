@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo: display:none - CSS</title>
+    <style>
+        .cuadro {
+            width: 50px;
+            height: 50px;
+            background-color: hsl(128, 83%, 37%);
+            margin: 10px;
+        }
+
+        .verde {
+            background-color: hsl(128, 83%, 37%);
+        }
+        .rojo {
+            background-color: hsl(0, 83%, 37%);
+        }
+        .azul {
+            background-color: hsl(240, 83%, 37%);
+        }
+        .amarillo {
+            background-color: hsl(60, 98%, 42%);
+        }
+
+        .removido {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>display:none</h1>
+
+    <div class="cuadro rojo"></div>
+    <div class="cuadro verde removido"></div>
+    <div class="cuadro azul"></div>
+    <div class="cuadro amarillo"></div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta Simple</title>
+    <!-- Estilos para la tarjeta -->
+    <link rel="stylesheet" href="css/21_display_flex.css">
+    <!-- Estilos para el flexbox -->
+    <style>
+        .contenedor {
+            /* Generales */
+            margin:20px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: hsl(0, 0%, 79%);
+            /* height: 700px; */
+            
+            /* Flexbox */
+            /* Convierte el elemento en un flexbox */
+            display: flex;
+            /* Permite que los elementos ocupen múltiples líneas */
+            flex-wrap: wrap;
+            /* Alineación en el eje principal
+            opciones: flex-start, flex-end, center, space-between 
+            space-around */
+            justify-content: flex-start;
+            /* Alineación en el eje secundario
+            Solo funciona si el eje secundario no tiene altura no automática
+            opciones: flex-start, flex-end, center, stretch */
+            align-items: flex-start;
+            /* Espaciado entre los elementos */
+            gap: 20px;
+        }
+
+        .card {
+            /* Alargar los elementos (el número de cada elemento determina la proporción) */
+            flex-grow: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <div class="card">
+            <div class="card-banner"></div>
+            <div class="card-content">
+                <h2 class="card-title">Tarjeta Simple</h2>
+                <p class="card-text">Este es un ejemplo sencillo de una tarjeta hecha con HTML y CSS.</p>
+                <a href="#" class="card-button">Ver más</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-banner"></div>
+            <div class="card-content">
+                <h2 class="card-title">Tarjeta Simple</h2>
+                <p class="card-text">Este es un ejemplo sencillo de una tarjeta hecha con HTML y CSS.</p>
+                <a href="#" class="card-button">Ver más</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-banner"></div>
+            <div class="card-content">
+                <h2 class="card-title">Tarjeta Simple</h2>
+                <p class="card-text">Este es un ejemplo sencillo de una tarjeta hecha con HTML y CSS.</p>
+                <a href="#" class="card-button">Ver más</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

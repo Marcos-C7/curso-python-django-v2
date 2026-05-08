@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector por atributo</title>
+    <style>
+        .cuadro {
+            width: 50px;
+            height: 50px;
+            background-color: hsl(180, 83%, 37%);
+            margin: 10px;
+        }
+
+        .cuadro[pos-borde="arriba"] {
+            border-top: 5px solid black;
+        }
+
+        .cuadro[pos-borde="derecha"] {
+            border-right: 5px solid black;
+        }
+
+        .cuadro[pos-borde="abajo"] {
+            border-bottom: 5px solid black;
+        }
+
+        .cuadro[pos-borde="izquierda"] {
+            border-left: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selector por atributo</h1>
+    
+    <div class="cuadro" pos-borde="arriba"></div>
+    <div class="cuadro" pos-borde="derecha"></div>
+    <div class="cuadro" pos-borde="abajo"></div>
+    <div class="cuadro" pos-borde="izquierda"></div>
+</body>
+</html>

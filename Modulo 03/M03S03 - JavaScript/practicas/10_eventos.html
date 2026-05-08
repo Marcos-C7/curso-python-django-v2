@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - JavaScript</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: 2px solid hsl(211, 100%, 20%);
+            border-radius: 5px;;
+        }
+        button:hover {
+            background-color: #0056b3;
+            border-color: hsl(211, 100%, 30%);
+        }
+        button:active {
+            background-color: #004080;
+            border-color: hsl(211, 100%, 40%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Eventos - JavaScript</h1>
+
+    <p>Haz clic en el botón para ver el mensaje en la consola</p>
+
+    <button class="msg-click">Mensaje en consola</button>
+
+    <p class="msg-hover">Pasa el mouse sobre este texto y mira la consola</p>
+
+    <script>
+        document.querySelector(".msg-click").addEventListener("click", function(e) {
+            console.log("¡Has hecho clic en el botón!");
+        });
+
+        document.querySelector(".msg-hover").addEventListener("mouseenter", function() {
+            console.log("¡Has pasado el mouse sobre el texto!");
+        });
+    </script>
+
+</body>
+</html>

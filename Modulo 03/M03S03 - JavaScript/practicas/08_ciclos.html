@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos "for" - JavaScript</title>
+</head>
+<body>
+    <h1>Ciclos "for"</h1>
+    <p>Revisa el mensaje en la consola</p>
+
+    <script>
+        // Sobre contadores
+        for (let i = 0; i < 3; i++) {
+            console.log("Iteración " + i);
+        }
+
+        // Sobre arreglos
+        let frutas = ["manzana", "banana", "naranja"];
+        for (const fruta of frutas) {
+            console.log(fruta);
+        }
+
+        // Sobre objetos
+        let persona = {
+            nombre: "Juan",
+            edad: 30,
+            ciudad: "Mérida"
+        };
+        for (const llave in persona) {
+            console.log(llave, persona[llave]);
+        }
+    </script>
+</body>
+</html>

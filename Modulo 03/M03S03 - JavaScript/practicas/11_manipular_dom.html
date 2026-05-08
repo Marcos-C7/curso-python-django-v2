@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular el DOM - JavaScript</title>
+    <style>
+        #lista {
+            color:rgb(56, 189, 19);
+        }
+    </style>
+</head>
+<body>
+    <h1>Manipular el DOM</h1>
+
+    <p><b>Lista de elementos:</b></p>
+    <p id="info-lista">Vacía</p>
+    <ul id="lista">
+    </ul>
+
+    <div id="control-agregar">
+        <span>Nuevo: </span>
+        <input type="text" placeholder="Valor">
+        <button type="button">Agregar</button>
+    </div>
+    
+    <script>
+        boton = document.querySelector("#control-agregar button");
+        boton.addEventListener("click", function() {
+            // Obtenemos el valor del input y removemos espacios de alrededor
+            const input = document.querySelector("#control-agregar input");
+            const valor = input.value.trim();
+            // Solo agregamos si hay un valor
+            if (valor) {
+
+            // Creamos un nuevo elemento <li> (inicialmente sin mostrarse)
+            const li = document.createElement("li");
+            // Agregamos el elemento a una lista con id "lista" (ahora visible)
+            document.querySelector("#lista").appendChild(li);
+
+                // Le asignamos el valor que sacamos del input
+                li.textContent = valor;
+                // Nos aseguramos de esconder el mensaje de "Vacía"
+                document.querySelector("#info-lista").style.display = "none";
+            }
+            // Limpiamos el input
+            input.value = "";
+        });
+    </script>
+</body>
+</html>

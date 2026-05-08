@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular clases - JavaScript</title>
+    <style>
+        .lista-desplegable {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 0px;
+        }
+
+        .lista-desplegable .titulo {
+            border-bottom: 1px solid #ccc;
+            padding: 5px;
+            margin: 0px;
+            font-weight: bold;
+        }
+        .lista-desplegable .titulo:hover {
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+        .lista-desplegable .titulo:active {
+            background-color: #e0e0e0;
+        }
+
+        .lista-desplegable .elementos {
+            padding: 10px 0px;
+        }
+        .lista-desplegable .elementos.oculto {
+            display: none;
+        }
+
+        .lista-desplegable .elementos div {
+            padding: 3px 10px;
+        }
+        .lista-desplegable .elementos div:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manipular clases</h1>
+
+    <div class="lista-desplegable">
+        <div class="titulo">Lista desplegable</div>
+        <div class="elementos">
+            <div>Elemento 1</div>
+            <div>Elemento 2</div>
+            <div>Elemento 3</div>
+        </div>
+    </div>
+
+    <script>
+        const titulo = document.querySelector(".lista-desplegable .titulo");
+        const elementos = document.querySelector(".lista-desplegable .elementos");
+
+        titulo.addEventListener("click", function() {
+            elementos.classList.toggle("oculto");
+        });
+    </script>
+</body>
+</html>

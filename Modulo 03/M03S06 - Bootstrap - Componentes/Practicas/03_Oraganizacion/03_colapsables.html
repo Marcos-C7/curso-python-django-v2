@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <title>Colapsables</title>
+</head>
+<body>
+    <!--
+    Colapsable básico: data-bs-toggle="collapse", data-bs-target="#ID_objetivo", class="collapse"
+    Podemos iniciarlo como expandido: show
+    Está contraido por defecto
+    -->
+    <div class="container my-5 py-3 border border-dark rounded-2">
+        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#mi_colapsable">Mostrar/ocultar</button>
+        <div id="mi_colapsable" class="collapse">
+            <p class="m-3 border border-dark rounded-3 p-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt suscipit quod neque deleniti repellat officia. Repudiandae eos ex voluptates quia?
+            </p>
+        </div>
+    </div>
+
+    <!-- Podemos iniciarlo como expandido: show -->
+    <div class="container my-5 py-3">
+        <button class="btn btn-primary mb-2" data-bs-toggle="collapse" data-bs-target="#mi_colapsable_2">Mostrar/ocultar</button>
+        <div id="mi_colapsable_2" class="collapse show">
+            <p class="border border-info bg-info bg-opacity-25 rounded-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt suscipit quod neque deleniti repellat officia. Repudiandae eos ex voluptates quia?
+            </p>
+        </div>
+    </div>
+
+    <!-- 
+    Acordeon: .accordion
+    NOTA: Si queremos que los acordiones no se escondan al abrir otro, solo quitamos `data-bs-parent="#<id>"`
+    -->
+    <div class="container my-5 py-3">
+        <div class="accordion" id="mi_acordeon">
+            <!-- Elemento 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#colapsable_1">
+                    Título del elemento
+                    </button>
+                </h2>
+                <div id="colapsable_1" class="accordion-collapse collapse show" data-bs-parent="#mi_acordeon">
+                    <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas optio incidunt nemo voluptate saepe maiores cumque mollitia ut. Porro, eligendi!
+                    </div>
+                </div>
+            </div>
+            <!-- Elemento 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#colapsable_2">
+                    Título del elemento
+                    </button>
+                </h2>
+                <div id="colapsable_2" class="accordion-collapse collapse" data-bs-parent="#mi_acordeon">
+                    <div class="accordion-body">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque vel vero perspiciatis dolorem iusto? Itaque fuga aspernatur quam rem minus.
+                    </div>
+                </div>
+            </div>
+            <!-- Elemento 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#colapsable_3">
+                    Título del elemento
+                    </button>
+                </h2>
+                <div id="colapsable_3" class="accordion-collapse collapse" data-bs-parent="#mi_acordeon">
+                    <div class="accordion-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti in reprehenderit corporis vel! Nam ullam rerum ipsum dolore. Quas, impedit.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

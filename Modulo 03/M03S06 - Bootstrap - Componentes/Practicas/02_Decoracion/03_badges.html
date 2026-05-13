@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <title>Badges</title>
+</head>
+<body>
+
+    <div class="container my-5 py-3 border border-dark text-center">
+        
+        <!--
+        Un elemento se puede estilizar como badge (insignia): badge
+        Se pueden usar en varios elementos, como: <span>, <div>, <h1>, etc 
+        -->
+        <div>
+            <h4>Badges básicos</h4>
+            <span class="badge bg-success">Success</span>
+            <span class="badge bg-warning">Warning</span>
+            <span class="badge bg-danger">Danger</span>
+            <span class="badge bg-primary">Primary</span>
+            <span class="badge bg-info">Info</span>
+            <span class="badge bg-dark">Dark</span>
+            <span class="badge bg-secondary">Secondary</span>
+        </div>
+
+        <!-- En forma de pill con: .rounded-pill -->
+        <div class="mt-5">
+            <h4>Badges con redondeo</h4>
+            <div>
+                <span class="badge rounded-1 bg-success">Success</span>
+                <span class="badge rounded-1 bg-warning">Warning</span>
+                <span class="badge rounded-1 bg-danger">Danger</span>
+                <span class="badge rounded-1 bg-primary">Primary</span>
+                <span class="badge rounded-1 bg-info">Info</span>
+                <span class="badge rounded-1 bg-dark">Dark</span>
+                <span class="badge rounded-1 bg-secondary">Secondary</span>
+            </div>
+            <div>
+                <span class="badge rounded-3 bg-success">Success</span>
+                <span class="badge rounded-3 bg-warning">Warning</span>
+                <span class="badge rounded-3 bg-danger">Danger</span>
+                <span class="badge rounded-3 bg-primary">Primary</span>
+                <span class="badge rounded-3 bg-info">Info</span>
+                <span class="badge rounded-3 bg-dark">Dark</span>
+                <span class="badge rounded-3 bg-secondary">Secondary</span>
+            </div>
+            <div>
+                <span class="badge rounded-pill bg-success">Success</span>
+                <span class="badge rounded-pill bg-warning">Warning</span>
+                <span class="badge rounded-pill bg-danger">Danger</span>
+                <span class="badge rounded-pill bg-primary">Primary</span>
+                <span class="badge rounded-pill bg-info">Info</span>
+                <span class="badge rounded-pill bg-dark">Dark</span>
+                <span class="badge rounded-pill bg-secondary">Secondary</span>
+            </div>
+            
+        </div>
+
+        <!-- Podemos usar posicionamientos absolutos para darle más utilidad -->
+        <div class="mt-5">
+            <h4>Badges con posicionamiento</h4>
+            <button class="btn btn-primary position-relative">
+                <span class="badge rounded-pill bg-danger position-absolute start-100 top-0 translate-middle">25</span>
+                Mensajes nuevos
+            </button>
+        </div>
+
+        <!-- Para representar etiquetas, aunque lo ideal sería usar nuestros propios colores -->
+        <div class="container mt-5">
+            <h4>Badges para manejar etiquetas</h4>
+            <div class="d-flex justify-content-center">
+                <div class="border border-dark p-2 rounded-3">
+                    <h6>Etiquetas</h6>
+                    <hr>
+                    <div class="d-flex flex-column">
+                        <span class="badge rounded-pill bg-success my-1">Completado</span>
+                        <span class="badge rounded-pill bg-warning my-1">En pruebas</span>
+                        <span class="badge rounded-pill bg-danger my-1">Error</span>
+                        <span class="badge rounded-pill bg-primary my-1">Mejora</span>
+                        <span class="badge rounded-pill bg-info my-1">Documentación</span>
+                        <span class="badge rounded-pill bg-dark my-1">Resuelto</span>
+                        <span class="badge rounded-pill bg-secondary my-1">Asignado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    
+</body>
+</html>

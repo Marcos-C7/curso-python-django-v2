@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario</title>
+</head>
+<body>
+    <h1>Horario semanal</h1>
+
+    <hr>
+
+    <h2>Horario</h2>
+
+    <table border="1">
+        <tr>
+            <th>Hora</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+        </tr>
+
+        <tr>
+            <td>8:00 - 10:00</td>
+            <td>HTML</td>
+            <td>CSS</td>
+            <td>JavaScript</td>
+            <td>HTML</td>
+            <td>Proyecto</td>
+        </tr>
+
+        <tr>
+            <td>10:00 - 11:00</td>
+
+            <td colspan="5">
+                Descanso
+            </td>
+        </tr>
+
+        <tr>
+            <td>11:00 - 1:00</td>
+            <td>Diseño</td>
+            <td>Git</td>
+            <td>React</td>
+            <td>Backend</td>
+            <td>Repaso</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Objetivos de la semana</h2>
+
+    <ul>
+        <li>Terminar ejercicios de HTML</li>
+        <li>Practicar tablas</li>
+        <li>Aprender formularios</li>
+        <li>Mejorar estructura semántica</li>
+    </ul>
+
+    <hr>
+
+    <h2>Agregar actividad</h2>
+
+    <form>
+        <label for="actividad">Nombre de actividad:</label>
+        <br>
+        <input type="text" id="actividad" name="actividad">
+
+        <br><br>
+
+        <label for="dia">Día:</label>
+        <br>
+        <input type="text" id="dia" name="dia">
+
+        <br><br>
+
+        <label for="hora">Horario:</label>
+        <br>
+        <input type="text" id="hora" name="hora">
+
+        <br><br>
+
+        <button type="submit">Guardar actividad</button>
+    </form>
+
+</body>
+</html>

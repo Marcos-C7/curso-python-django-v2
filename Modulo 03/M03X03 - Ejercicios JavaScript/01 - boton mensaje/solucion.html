@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Personal</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>JavaScript básico</h1>
+
+    <p>Haz clic en el botón para mostrar un mensaje.</p>
+
+    <button id="btn-msg">Mostrar mensaje</button>
+
+    <script>
+        // SOLUCIÓN
+        const button = document.querySelector("#btn-msg");
+
+        button.addEventListener("click", function () {
+            alert("Hola mundo");
+        });
+    </script>
+</body>
+</html>

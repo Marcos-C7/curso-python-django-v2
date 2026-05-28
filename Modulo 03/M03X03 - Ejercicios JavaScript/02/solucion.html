@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Personal</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Manipulación del DOM</h1>
+
+        <p id="message">Este texto cambiará.</p>
+
+        <button id="change-text-button">Cambiar texto</button>
+    </div>
+
+    <script>
+        // SOLUCIÓN
+        const button = document.querySelector("#change-text-button");
+
+        const message = document.querySelector("#message");
+
+        button.addEventListener("click", function () {
+
+            message.textContent =
+                "El texto fue cambiado con JavaScript";
+
+        });
+    </script>
+</body>
+</html>

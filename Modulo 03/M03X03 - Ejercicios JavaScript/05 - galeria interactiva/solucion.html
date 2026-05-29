@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería interactiva</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="product-card">
+
+        <img id="main-image" src="https://picsum.photos/600/400?random=1" alt="Producto">
+
+        <h1 id="product-name">Laptop Pro</h1>
+
+        <h2 id="product-price">$24,999</h2>
+
+        <p id="product-description">Laptop para desarrollo y productividad.</p>
+
+        <div class="thumbnails">
+            <button id="product-1">Laptop</button>
+
+            <button id="product-2">Smartphone</button>
+
+            <button id="product-3">Monitor</button>
+        </div>
+
+    </div>
+
+
+    <script>
+        // SOLUCIÓN
+        const image = document.querySelector("#main-image");
+        const nameElement = document.querySelector("#product-name");
+        const priceElement = document.querySelector("#product-price");
+        const descriptionElement = document.querySelector("#product-description");
+
+        document.querySelector("#product-1").addEventListener("click", function () {
+            image.src = "https://picsum.photos/600/400?random=1";
+            nameElement.textContent = "Laptop Pro";
+            priceElement.textContent = "$24,999";
+            descriptionElement.textContent = "Laptop para desarrollo y productividad.";
+        });
+
+        document.querySelector("#product-2").addEventListener("click", function () {
+            image.src = "https://picsum.photos/600/400?random=2";
+            nameElement.textContent = "Smartphone X";
+            priceElement.textContent = "$14,999";
+            descriptionElement.textContent = "Smartphone con cámara profesional.";
+        });
+
+        document.querySelector("#product-3").addEventListener("click", function () {
+            image.src = "https://picsum.photos/600/400?random=3";
+            nameElement.textContent = "Monitor UltraWide";
+            priceElement.textContent = "$9,999";
+            descriptionElement.textContent ="Monitor ideal para multitarea.";
+        });
+    </script>
+</body>
+</html>

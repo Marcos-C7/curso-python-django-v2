@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería interactiva</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!--
+    En este ejercicio nos vamos a enfocar en la parte de JavaScript, el código
+    HTML y CSS les será dado, así que solo hay que enfocarse en el código 
+    JavaScript.
+
+    NOTAS: 
+    - Puedes renderizar la solución en el navegador, sin revisar el código, 
+        para ver el resultado final e intentar replicarlo.
+    - El códgio JavaScript lo puedes integrar desde un archivo JavaScript 
+        externo o en un bloque <script> en el <head>.
+    - No tiene que quedar exactamente igual a la solución solo que funcione
+        similar.
+    
+    Ejercicio:
+    implementar funcionalidad con JavaScript para cambiar la información
+    de un producto cuando el usuario seleccione una miniatura.
+
+    IMPORTANTE:
+    - El HTML y CSS ya están hechos.
+    - El ejercicio consiste SOLO en implementar JavaScript.
+
+    Funcionalidad a implementar:
+    Cuando el usuario haga clic en cualquiera de los botones:
+        product-1
+        product-2
+        product-3
+    Debe actualizarse:
+    - La imagen con id:
+        main-image
+    - El nombre del producto con id:
+        product-name
+    - El precio con id:
+        product-price
+    - La descripción con id:
+        product-description
+    Los datos a mostrar son:
+    Producto 1:
+        Nombre:
+            Laptop Pro
+        Precio:
+            $24,999
+        Descripción:
+            Laptop para desarrollo y productividad.
+        Imagen:
+            https://picsum.photos/600/400?random=1
+    Producto 2:
+        Nombre:
+            Smartphone X
+        Precio:
+            $14,999
+        Descripción:
+            Smartphone con cámara profesional.
+        Imagen:
+            https://picsum.photos/600/400?random=2
+    Producto 3:
+        Nombre:
+            Monitor UltraWide
+        Precio:
+            $9,999
+        Descripción:
+            Monitor ideal para multitarea.
+        Imagen:
+            https://picsum.photos/600/400?random=3
+
+    Conceptos JavaScript recomendados:
+    document.querySelector
+    addEventListener
+    textContent
+    src
+
+    Objetivo:
+    Aprender:
+    - manipulación de múltiples elementos,
+    - modificación de atributos,
+    - actualización dinámica de contenido,
+    - creación de interfaces interactivas.
+    -->
+
+    <div class="product-card">
+
+        <img id="main-image" src="https://picsum.photos/600/400?random=1" alt="Producto">
+
+        <h1 id="product-name">Laptop Pro</h1>
+
+        <h2 id="product-price">$24,999</h2>
+
+        <p id="product-description">Laptop para desarrollo y productividad.</p>
+
+        <div class="thumbnails">
+            <button id="product-1">Laptop</button>
+
+            <button id="product-2">Smartphone</button>
+
+            <button id="product-3">Monitor</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

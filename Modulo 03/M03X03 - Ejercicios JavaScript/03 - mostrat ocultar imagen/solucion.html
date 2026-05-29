@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar/ocultar imagen</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mostrar y ocultar</h1>
+
+        <button id="toggle-button">Mostrar / Ocultar imagen</button>
+
+        <img id="image" src="https://picsum.photos/300/200" alt="Imagen de ejemplo">
+    </div>
+
+
+    <script>
+        // SOLUCIÓN
+        const button = document.querySelector("#toggle-button");    
+        const image = document.querySelector("#image");
+
+        button.addEventListener("click", function () {
+            if (image.style.display === "none") {
+                image.style.display = "block";
+            } else {
+                image.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

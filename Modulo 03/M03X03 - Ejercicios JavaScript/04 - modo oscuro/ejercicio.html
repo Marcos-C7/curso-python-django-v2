@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo oscuro</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- 
+    En este ejercicio nos vamos a enfocar en la parte de JavaScript, el código
+    HTML y CSS les será dado, así que solo hay que enfocarse en el código 
+    JavaScript.
+
+    NOTAS: 
+    - Puedes renderizar la solución en el navegador, sin revisar el código, 
+        para ver el resultado final e intentar replicarlo.
+    - El códgio JavaScript lo puedes integrar desde un archivo JavaScript 
+        externo o en un bloque <script> en el <head>.
+    - No tiene que quedar exactamente igual a la solución solo que funcione
+        similar.
+    
+    Ejercicio:
+    implementar funcionalidad con JavaScript para cambiar entre
+    modo claro y modo oscuro.
+
+    IMPORTANTE:
+    - El HTML y CSS ya están hechos.
+    - El ejercicio consiste SOLO en implementar JavaScript.
+
+    Funcionalidad a implementar:
+    - Cuando el usuario haga clic en el botón con id:
+        "theme-button"
+    - Debe agregarse o quitarse la clase:
+        "dark-mode"
+    - La clase debe agregarse o quitarse sobre el elemento:
+        <body>
+    - El texto del botón también debe cambiar:
+        Si está en modo claro:
+            "Activar modo oscuro"
+        Si está en modo oscuro:
+            "Activar modo claro"
+
+    Pista:
+    - Revisa:
+        classList.toggle()
+        classList.contains()
+
+    Conceptos JavaScript recomendados:
+    document.querySelector
+    addEventListener
+    classList.toggle
+    classList.contains
+    textContent
+
+    Objetivo:
+    Aprender:
+    - manipulación de clases CSS,
+    - cambios visuales complejos desde JavaScript,
+    - lectura de estado,
+    - interacción entre HTML, CSS y JavaScript.
+    -->
+    
+    <div class="card">
+
+        <h1>Mi Dashboard</h1>
+
+        <p>Bienvenido a tu panel de control.</p>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h2>Usuarios</h2>
+                <p>1,250</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>Ventas</h2>
+                <p>$8,500</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>Pedidos</h2>
+                <p>342</p>
+            </div>
+        </div>
+
+        <button id="theme-button">Activar modo oscuro</button>
+
+    </div>
+
+</body>
+</html>

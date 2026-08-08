@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.views import View
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, CreateView
+from django.urls import reverse_lazy
 import pdb
+
+from .forms import TareaForm
 
 
 # Create your views here.
@@ -62,4 +65,9 @@ class VistaPlantillaDjango(TemplateView):
 
         return render(request, self.template_name, contexto)
 
+
+class CrearTarea(CreateView):
+    template_name = 'bases/crear_tarea.html'
+    form_class = TareaForm
+    success_url = reverse_lazy('bases:crear_tarea')
 

@@ -9,5 +9,6 @@ urlpatterns = [
     path('vista_plantilla/', views.MiPlantilla.as_view(), name='vista_plantilla'),
     path('vista_producto/', views.VistaProducto.as_view(), name='vista_producto'),
     path('vista_plantilla_django/', views.VistaPlantillaDjango.as_view(), name='vista_plantilla_django'),
+    path('crear_tarea/', views.CrearTarea.as_view(), name='crear_tarea'),
 ]
 

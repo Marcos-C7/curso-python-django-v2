@@ -9,6 +9,7 @@
 
             <form class="needs-validation p-4" method="post" novalidate>
                 {% csrf_token %}
+                
                 <div class="input-group my-2 pt-4">
                     <span class="input-group-text"><i class="fa-solid fa-heading"></i></span>
                     {{ form.titulo }}
@@ -16,6 +17,7 @@
                     <div class="invalid-feedback d-block">{{error}}</div>
                     {% endfor %}
                 </div>
+
                 <div class="input-group my-2">
                     <span class="input-group-text"><i class="fa-solid fa-pen"></i></span>
                     {{ form.descripcion }}
@@ -37,10 +39,10 @@
                     <div class="invalid-feedback d-block">{{error}}</div>
                     {% endfor %}
                 </div>
+
                 {% for error in form.non_field_errors %}
                 <div class="invalid-feedback d-block">{{error}}</div>
                 {% endfor %}
-
 
                 <div class="d-flex mt-1 flex-wrap justify-content-between text-secondary align-items-baseline">
                     <button type="submit" class="btn btn-outline-dark mt-3">Enviar</button>

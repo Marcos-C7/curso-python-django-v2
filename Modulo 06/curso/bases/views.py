@@ -71,3 +71,4 @@ class CrearTarea(CreateView):
     form_class = TareaForm
     success_url = reverse_lazy('bases:crear_tarea')
 
+

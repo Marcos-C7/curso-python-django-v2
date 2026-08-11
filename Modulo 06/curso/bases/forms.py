@@ -32,5 +32,11 @@ class TareaForm(forms.ModelForm):
                 },
             ),
         }
+    
+    def clean(self):
+        cleaned_data = super().clean()
 
-
+        if cleaned_data['fecha_inicio'] > cleaned_data['fecha_limite']:
+            raise forms.ValidationError("La fecha de inicio no puede ser mayor a la fecha límite")
+        
+        return cleaned_data

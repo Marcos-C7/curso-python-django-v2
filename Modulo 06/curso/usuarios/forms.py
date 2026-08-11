@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 class CrearUsuarioForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
@@ -20,3 +20,21 @@ class CrearUsuarioForm(UserCreationForm):
             "placeholder": "Confirmar contraseña",
         })
 
+
+class IniciarSesionForm(AuthenticationForm):
+    def __init__(self, *args, **kwargs):
+        """ Similar a CrearUsuarioForm, los campos no están relacionados con
+        un modelo por lo que debemos definir los widgets en el constructor de 
+        la clase.
+        """
+        super().__init__(*args, **kwargs)
+        
+        self.fields["username"].widget = forms.TextInput(attrs={
+            "class": "form-control",
+            "placeholder": "Usuario",
+        })
+
+        self.fields["password"].widget = forms.PasswordInput(attrs={
+            "class": "form-control",
+            "placeholder": "Contraseña",
+        })

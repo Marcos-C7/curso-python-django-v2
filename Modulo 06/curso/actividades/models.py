@@ -38,7 +38,7 @@ class Actividad(models.Model):
     fecha_limite = models.DateField(verbose_name="fecha límite")
     importancia = models.ForeignKey(Importancia, on_delete=models.CASCADE)
     estado = models.ForeignKey(Estado, on_delete=models.CASCADE)
-    # usuario = models.ForeignKey(User, on_delete=models.CASCADE) # Empezar sin el usuario y luego explicar por qué hay que agregarlo
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     fecha_creacion = models.DateTimeField(auto_now_add=True, verbose_name="fecha creación")
     fecha_actualizacion = models.DateTimeField(auto_now=True, verbose_name="fecha actualización")
 

@@ -1,0 +1,79 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+
+<div class="container align-center py-5">
+    <div class="shadow">
+        <h1 class="display-4 bg-dark text-white py-4 px-3 rounded-top border border-dark my-0">{{accion|title}} actividad</h1>
+        <div class="rounded-bottom border border-dark  bg-light">
+
+            <form class="needs-validation p-4" method="post" novalidate>
+                {% csrf_token %}
+                <div class="form-floating my-3">
+                    {{ form.titulo }}
+                    <label for="et_titulo">Título</label>
+                    {% for error in form.titulo.errors %}
+                    <div class="invalid-feedback d-block">{{error}}</div>
+                    {% endfor %}
+                </div>
+    
+                <div class="form-floating my-3">
+                    {{ form.descripcion }}
+                    <label for="et_descripcion">Descripción</label>
+                    {% for error in form.descripcion.errors %}
+                    <div class="invalid-feedback d-block">{{error}}</div>
+                    {% endfor %}
+                </div>
+    
+                <div class="form-floating my-3">
+                    {{ form.fecha_inicio }}
+                    <label for="et_fecha_ini">Fecha de inicio</label>
+                    {% for error in form.fecha_inicio.errors %}
+                    <div class="invalid-feedback d-block">{{error}}</div>
+                    {% endfor %}
+                </div>
+    
+                <div class="form-floating my-3">
+                    {{ form.fecha_limite }}
+                    <label for="et_fecha_lim">Fecha límite</label>
+                    {% for error in form.fecha_limite.errors %}
+                    <div class="invalid-feedback d-block">{{error}}</div>
+                    {% endfor %}
+                </div>
+    
+                <div class="my-3">
+                    <label for="{{ form.importancia.id_for_label }}">Importancia</label>
+                    {{ form.importancia }}
+                    {% for error in form.importancia.errors %}
+                    <div class="invalid-feedback d-block">{{error}}</div>
+                    {% endfor %}
+                </div>
+    
+                <div class="my-3">
+                    <label for="{{ form.estado.id_for_label }}">Estado</label>
+                    {{ form.estado }}
+                    {% for error in form.estado.errors %}
+                    <div class="invalid-feedback d-block">{{error}}</div>
+                    {% endfor %}
+                </div>
+
+                {% for error in form.non_field_errors %}
+                <div class="invalid-feedback d-block">{{error}}</div>
+                {% endfor %}
+
+                <div class="d-flex mt-1 flex-wrap justify-content-between text-secondary align-items-baseline">
+                    <button type="submit" class="btn btn-outline-dark mt-3">Enviar</button>
+                    <!-- Esto es una actividad extra para el proyecto final, se muestre un botón de cancelar
+                    solo para el modo de Editar, que envíe a la vista de detalle del elemento correspondiente -->
+                    {% if accion|lower == "editar" %}
+                    <a href="{% url 'actividades:detalle' actividad.id %}" class="btn btn-outline-danger mt-3">Cancelar</a>
+                    {% endif %}
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

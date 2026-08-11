@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import RedirectView
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
-class Home(TemplateView):
-    template_name = "core/base.html"
+class Home(LoginRequiredMixin, RedirectView):
+    login_url = reverse_lazy('usuarios:iniciar_sesion')
+    pattern_name = 'actividades:lista'
 

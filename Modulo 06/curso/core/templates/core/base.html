@@ -63,7 +63,7 @@
                             </form>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == url_cambiar_password %}active{% endif %}" href="">
+                            <a class="nav-link {% if request.path == url_cambiar_password %}active{% endif %}" href="{% url 'usuarios:cambiar_password' %}">
                                 Cambiar contraseña
                             </a>
                         </li>

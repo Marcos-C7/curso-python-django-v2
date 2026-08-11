@@ -50,7 +50,7 @@
                             <a class="nav-link {% if request.path == url_actividades_nueva %}active{% endif %}" href="{% url 'actividades:nueva' %}">Nueva actividad</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == url_actividades_generador %}active{% endif %}" href="">Generador</a>
+                            <a class="nav-link {% if request.path == url_actividades_generador %}active{% endif %}" href="{% url 'actividades:generador' %}">Generador</a>
                         </li>
                         {% endif %}
                     </ul>

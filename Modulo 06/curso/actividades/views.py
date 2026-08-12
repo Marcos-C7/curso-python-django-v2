@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView, TemplateView, DetailView
+from django.urls import reverse_lazy, reverse
+from django.views.generic import CreateView, ListView, TemplateView, DetailView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .forms import ActividadForm
@@ -41,14 +41,19 @@ class Generador(LoginRequiredMixin, TemplateView):
 
     def post(self, request):
         # Número de actividades indicadas en el formulario
-        cantidad = int(request.POST.get('cantidad', 0))
+        cantidad = request.POST.get('cantidad', '0')
+        
+        if not cantidad or not cantidad.isdigit():
+            cantidad = '0'
+        
+        cantidad = int(cantidad)
+
         # Fecha mínima de inicio de las actividades
         fecha_base = datetime.date(year=2023, month=1, day=1)
         # Lista de etiquetas existentes
         et_importancia = Importancia.objects.all()
         et_estado = Estado.objects.all()
 
-        # actividades = []
         for _ in range(cantidad):
             actividad = Actividad()
             actividad.titulo = lorem.sentence()
@@ -64,12 +69,6 @@ class Generador(LoginRequiredMixin, TemplateView):
             actividad.estado = et_estado[random.randint(0, len(et_estado) - 1)]
             
             actividad.save()
-            # actividades.append(actividad)
-        
-        # Para usar `bulk_create` NO tenemos que invocar el método `save` en las instancias.
-        # Actividad.objects.bulk_create(actividades)
-
-        # print(connection.queries)
 
         # Redireccionamos a la lista de actividades
         return redirect('actividades:lista')
@@ -78,20 +77,35 @@ class Generador(LoginRequiredMixin, TemplateView):
 class Detalle(LoginRequiredMixin, DetailView):
     login_url = reverse_lazy('usuarios:iniciar_sesion')
     template_name = 'actividades/detalle.html'
-    model = Actividad
+    
+    def get_queryset(self):
+        objetos = Actividad.objects.filter(usuario=self.request.user)
+
+        return objetos
 
 
+class Editar(LoginRequiredMixin, UpdateView):
+    login_url = reverse_lazy('usuarios:iniciar_sesion')
+    template_name = 'actividades/nueva.html'
+    form_class = ActividadForm
+    
+    def get_queryset(self):
+        objetos = Actividad.objects.filter(usuario=self.request.user)
+
+        return objetos
+
+    def get_success_url(self):
+        return reverse('actividades:detalle', args=(self.kwargs['pk'],))
 
 
+class Eliminar(LoginRequiredMixin, DeleteView):
+    login_url = reverse_lazy('usuarios:iniciar_sesion')
+    template_name = 'actividades/detalle.html'
+    extra_context = {'confirmar_eliminar': True}
+    success_url = reverse_lazy('core:home')
+    
+    def get_queryset(self):
+        objetos = Actividad.objects.filter(usuario=self.request.user)
 
-
-
-
-
-
-
-
-
-
-
+        return objetos
 

@@ -17,8 +17,8 @@
 
 <div class="container d-flex flex-wrap gap-3 py-5 justify-content-between">
     <div>
-        <a class="btn btn-primary" href="">Editar</a>
-        <a class="btn btn-danger" href="">Eliminar</a>
+        <a class="btn btn-primary" href="{% url 'actividades:editar' actividad.id %}">Editar</a>
+        <a class="btn btn-danger" href="{% url 'actividades:eliminar' actividad.id %}">Eliminar</a>
     </div>
 </div>
 

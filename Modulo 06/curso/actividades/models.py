@@ -53,5 +53,6 @@ class Actividad(models.Model):
         # Configuración para el admin-site
         verbose_name = 'Actividad'
         verbose_name_plural = 'Actividades'
+        ordering = ['-fecha_creacion']
 
 

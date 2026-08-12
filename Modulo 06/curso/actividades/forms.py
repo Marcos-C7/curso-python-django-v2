@@ -28,6 +28,7 @@ class ActividadForm(forms.ModelForm):
                     "class": "form-control",
                     "type": "date",
                 },
+                format="%Y-%m-%d",
             ),
 
             "fecha_limite": forms.DateInput(
@@ -35,6 +36,7 @@ class ActividadForm(forms.ModelForm):
                     "class": "form-control",
                     "type": "date",
                 },
+                format="%Y-%m-%d",
             ),
             
             # Como los campos `importancia` y `estado` son `ForeignKey` en el modelo, la clase `ModelForm` ya sabe
